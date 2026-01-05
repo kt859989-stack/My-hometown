@@ -1,0 +1,211 @@
+/* 通用样式 */
+body {
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* 头部导航栏 */
+.main-header {
+    background-color: #004080; /* 厦大蓝 */
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffd700; /* 金色 */
+}
+
+/* 主标题和副标题 */
+.page-title {
+    color: #004080;
+    font-size: 38px;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.subtitle {
+    color: #555;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/* 引言部分 */
+.intro-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.intro-section h2 {
+    color: #004080;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.intro-section p {
+    text-indent: 2em; /* 首行缩进 */
+}
+
+.image-with-caption {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.caption {
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+}
+
+.credit {
+    text-align: right;
+    font-size: 14px;
+    color: #666;
+}
+
+.credit a {
+    color: #007bff;
+    text-decoration: none;
+}
+.credit a:hover {
+    text-decoration: underline;
+}
+
+/* 快速通道卡片 */
+.section-title {
+    color: #004080;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 响应式网格布局 */
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.card-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #004080;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* 底部 */
+.main-footer {
+    background-color: #004080;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.main-footer p {
+    margin: 5px 0;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap; /* 链接可换行 */
+        justify-content: center;
+    }
+    .nav-links li {
+        margin: 5px 10px;
+    }
+    .page-title {
+        font-size: 32px;
+    }
+    .card-grid {
+        grid-template-columns: 1fr; /* 小屏幕下卡片垂直堆叠 */
+    }
+}
